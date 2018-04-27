@@ -1,0 +1,78 @@
+clone:
+  path: github.com/udistrital/experiencia_laboral_crud
+
+build:
+
+  # build and test the go program
+  go:
+    image: golang:1.9
+    commands:
+     - go get -t
+     - GOOS=linux GOARCH=amd64 go build -o main
+     - go test ./... -cover
+    when:
+      branch:
+        - develop
+        - master
+      event: push
+
+  # prepare imagedef.json and app.zip for deployment
+  sed:
+    image: alpine
+    commands:
+      - sed -i 's|SED_TAG|'${CI_COMMIT:0:7}'|' imagedef.json
+      - apk -U add zip
+      - zip app.zip imagedef.json
+    when:
+      branch:
+        - develop
+        - master
+      event: push
+
+publish:
+
+  # build and push docker image to docker hub
+  docker:
+    repo: oas0/experiencia_laboral_crud
+    tag:
+      - $${COMMIT:0:7}
+      - latest
+    username: $$DRONE_DOCKERID_LOGIN
+    password: $$DRONE_DOCKERID_PASSWORD
+    email: computoud@googlegroups.com
+    when:
+      branch:
+        - develop
+        - master
+      event: push
+
+  # upload app.zip to s3 bucket for CodePipline
+  s3:
+    region: "us-east-1"
+    bucket: "drone-helper-bucket"
+    access_key: $$DRONE_AWS_ACCESS_KEY_ID
+    secret_key: $$DRONE_AWS_SECRET_ACCESS_KEY
+    source: app.zip
+    target: /apps/experiencia_laboral_crud-$$BRANCH.zip
+    when:
+      branch:
+        - develop
+        - master
+      event: push
+
+notify:
+
+  # notify telegram
+  webhook:
+    urls:
+      - https://api.telegram.org/bot$$DRONE_TELEGRAM_TOKEN/sendMessage
+    content_type: application/json
+    template: >
+      {
+        "chat_id": "-129350403",
+        "parse_mode": "Markdown",
+        "text": "`{{repo.full_name}}` [{{uppercase build.status}}]({{build.link_url}}) `{{build.branch}}`@{{truncate build.commit 7}}"
+      }
+    when:
+      branch: develop
+      event: push

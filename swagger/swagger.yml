@@ -1,0 +1,1101 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /cargo/:
+    get:
+      tags:
+      - cargo
+      description: get Cargo
+      operationId: CargoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cargo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - cargo
+      description: create Cargo
+      operationId: CargoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Cargo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Cargo'
+      responses:
+        "201":
+          description: '{int} models.Cargo'
+        "403":
+          description: body is empty
+  /cargo/{id}:
+    get:
+      tags:
+      - cargo
+      description: get Cargo by id
+      operationId: CargoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cargo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - cargo
+      description: update the Cargo
+      operationId: CargoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Cargo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Cargo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Cargo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - cargo
+      description: delete the Cargo
+      operationId: CargoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dato_adicional_experiencia_laboral/:
+    get:
+      tags:
+      - dato_adicional_experiencia_laboral
+      description: get DatoAdicionalExperienciaLaboral
+      operationId: DatoAdicionalExperienciaLaboralController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalExperienciaLaboral'
+        "403":
+          description: ""
+    post:
+      tags:
+      - dato_adicional_experiencia_laboral
+      description: create DatoAdicionalExperienciaLaboral
+      operationId: DatoAdicionalExperienciaLaboralController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for DatoAdicionalExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoAdicionalExperienciaLaboral'
+      responses:
+        "201":
+          description: '{int} models.DatoAdicionalExperienciaLaboral'
+        "403":
+          description: body is empty
+  /dato_adicional_experiencia_laboral/{id}:
+    get:
+      tags:
+      - dato_adicional_experiencia_laboral
+      description: get DatoAdicionalExperienciaLaboral by id
+      operationId: DatoAdicionalExperienciaLaboralController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalExperienciaLaboral'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dato_adicional_experiencia_laboral
+      description: update the DatoAdicionalExperienciaLaboral
+      operationId: DatoAdicionalExperienciaLaboralController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for DatoAdicionalExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoAdicionalExperienciaLaboral'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalExperienciaLaboral'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dato_adicional_experiencia_laboral
+      description: delete the DatoAdicionalExperienciaLaboral
+      operationId: DatoAdicionalExperienciaLaboralController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dato_adicional_tipo_experiencia_laboral/:
+    get:
+      tags:
+      - dato_adicional_tipo_experiencia_laboral
+      description: get DatoAdicionalTipoExperienciaLaboral
+      operationId: DatoAdicionalTipoExperienciaLaboralController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+        "403":
+          description: ""
+    post:
+      tags:
+      - dato_adicional_tipo_experiencia_laboral
+      description: create DatoAdicionalTipoExperienciaLaboral
+      operationId: DatoAdicionalTipoExperienciaLaboralController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for DatoAdicionalTipoExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+      responses:
+        "201":
+          description: '{int} models.DatoAdicionalTipoExperienciaLaboral'
+        "403":
+          description: body is empty
+  /dato_adicional_tipo_experiencia_laboral/{id}:
+    get:
+      tags:
+      - dato_adicional_tipo_experiencia_laboral
+      description: get DatoAdicionalTipoExperienciaLaboral by id
+      operationId: DatoAdicionalTipoExperienciaLaboralController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dato_adicional_tipo_experiencia_laboral
+      description: update the DatoAdicionalTipoExperienciaLaboral
+      operationId: DatoAdicionalTipoExperienciaLaboralController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for DatoAdicionalTipoExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dato_adicional_tipo_experiencia_laboral
+      description: delete the DatoAdicionalTipoExperienciaLaboral
+      operationId: DatoAdicionalTipoExperienciaLaboralController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /experiencia_laboral/:
+    get:
+      tags:
+      - experiencia_laboral
+      description: get ExperienciaLaboral
+      operationId: ExperienciaLaboralController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ExperienciaLaboral'
+        "403":
+          description: ""
+    post:
+      tags:
+      - experiencia_laboral
+      description: create ExperienciaLaboral
+      operationId: ExperienciaLaboralController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ExperienciaLaboral'
+      responses:
+        "201":
+          description: '{int} models.ExperienciaLaboral'
+        "403":
+          description: body is empty
+  /experiencia_laboral/{id}:
+    get:
+      tags:
+      - experiencia_laboral
+      description: get ExperienciaLaboral by id
+      operationId: ExperienciaLaboralController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ExperienciaLaboral'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - experiencia_laboral
+      description: update the ExperienciaLaboral
+      operationId: ExperienciaLaboralController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ExperienciaLaboral'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ExperienciaLaboral'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - experiencia_laboral
+      description: delete the ExperienciaLaboral
+      operationId: ExperienciaLaboralController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /soporte_experiencia_laboral/:
+    get:
+      tags:
+      - soporte_experiencia_laboral
+      description: get SoporteExperienciaLaboral
+      operationId: SoporteExperienciaLaboralController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteExperienciaLaboral'
+        "403":
+          description: ""
+    post:
+      tags:
+      - soporte_experiencia_laboral
+      description: create SoporteExperienciaLaboral
+      operationId: SoporteExperienciaLaboralController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SoporteExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SoporteExperienciaLaboral'
+      responses:
+        "201":
+          description: '{int} models.SoporteExperienciaLaboral'
+        "403":
+          description: body is empty
+  /soporte_experiencia_laboral/{id}:
+    get:
+      tags:
+      - soporte_experiencia_laboral
+      description: get SoporteExperienciaLaboral by id
+      operationId: SoporteExperienciaLaboralController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteExperienciaLaboral'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - soporte_experiencia_laboral
+      description: update the SoporteExperienciaLaboral
+      operationId: SoporteExperienciaLaboralController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SoporteExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SoporteExperienciaLaboral'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SoporteExperienciaLaboral'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - soporte_experiencia_laboral
+      description: delete the SoporteExperienciaLaboral
+      operationId: SoporteExperienciaLaboralController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_dedicacion/:
+    get:
+      tags:
+      - tipo_dedicacion
+      description: get TipoDedicacion
+      operationId: TipoDedicacionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoDedicacion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_dedicacion
+      description: create TipoDedicacion
+      operationId: TipoDedicacionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoDedicacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoDedicacion'
+      responses:
+        "201":
+          description: '{int} models.TipoDedicacion'
+        "403":
+          description: body is empty
+  /tipo_dedicacion/{id}:
+    get:
+      tags:
+      - tipo_dedicacion
+      description: get TipoDedicacion by id
+      operationId: TipoDedicacionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoDedicacion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_dedicacion
+      description: update the TipoDedicacion
+      operationId: TipoDedicacionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoDedicacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoDedicacion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoDedicacion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_dedicacion
+      description: delete the TipoDedicacion
+      operationId: TipoDedicacionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_experiencia_laboral/:
+    get:
+      tags:
+      - tipo_experiencia_laboral
+      description: get TipoExperienciaLaboral
+      operationId: TipoExperienciaLaboralController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoExperienciaLaboral'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_experiencia_laboral
+      description: create TipoExperienciaLaboral
+      operationId: TipoExperienciaLaboralController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoExperienciaLaboral'
+      responses:
+        "201":
+          description: '{int} models.TipoExperienciaLaboral'
+        "403":
+          description: body is empty
+  /tipo_experiencia_laboral/{id}:
+    get:
+      tags:
+      - tipo_experiencia_laboral
+      description: get TipoExperienciaLaboral by id
+      operationId: TipoExperienciaLaboralController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoExperienciaLaboral'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_experiencia_laboral
+      description: update the TipoExperienciaLaboral
+      operationId: TipoExperienciaLaboralController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoExperienciaLaboral content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoExperienciaLaboral'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoExperienciaLaboral'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_experiencia_laboral
+      description: delete the TipoExperienciaLaboral
+      operationId: TipoExperienciaLaboralController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_vinculacion/:
+    get:
+      tags:
+      - tipo_vinculacion
+      description: get TipoVinculacion
+      operationId: TipoVinculacionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoVinculacion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_vinculacion
+      description: create TipoVinculacion
+      operationId: TipoVinculacionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoVinculacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoVinculacion'
+      responses:
+        "201":
+          description: '{int} models.TipoVinculacion'
+        "403":
+          description: body is empty
+  /tipo_vinculacion/{id}:
+    get:
+      tags:
+      - tipo_vinculacion
+      description: get TipoVinculacion by id
+      operationId: TipoVinculacionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoVinculacion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_vinculacion
+      description: update the TipoVinculacion
+      operationId: TipoVinculacionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoVinculacion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoVinculacion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoVinculacion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_vinculacion
+      description: delete the TipoVinculacion
+      operationId: TipoVinculacionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.Cargo:
+    title: Cargo
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.DatoAdicionalExperienciaLaboral:
+    title: DatoAdicionalExperienciaLaboral
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      DatoAdicionalTipoExperienciaLaboral:
+        $ref: '#/definitions/models.DatoAdicionalTipoExperienciaLaboral'
+      ExperienciaLaboral:
+        $ref: '#/definitions/models.ExperienciaLaboral'
+      Id:
+        type: integer
+        format: int64
+      Valor:
+        type: string
+  models.DatoAdicionalTipoExperienciaLaboral:
+    title: DatoAdicionalTipoExperienciaLaboral
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      TipoDatoAdicional:
+        type: integer
+        format: int64
+      TipoExperienciaLaboral:
+        $ref: '#/definitions/models.TipoExperienciaLaboral'
+  models.ExperienciaLaboral:
+    title: ExperienciaLaboral
+    type: object
+    properties:
+      Actividades:
+        type: string
+      Cargo:
+        $ref: '#/definitions/models.Cargo'
+      FechaFinalizacion:
+        type: string
+        format: string
+      FechaInicio:
+        type: string
+        format: string
+      Id:
+        type: integer
+        format: int64
+      Organizacion:
+        type: integer
+        format: int64
+      Persona:
+        type: integer
+        format: int64
+      TipoDedicacion:
+        $ref: '#/definitions/models.TipoDedicacion'
+      TipoExperienciaLaboral:
+        $ref: '#/definitions/models.TipoExperienciaLaboral'
+      TipoVinculacion:
+        $ref: '#/definitions/models.TipoVinculacion'
+  models.SoporteExperienciaLaboral:
+    title: SoporteExperienciaLaboral
+    type: object
+    properties:
+      Descripcion:
+        type: string
+      Documento:
+        type: integer
+        format: int64
+      ExperienciaLaboral:
+        $ref: '#/definitions/models.ExperienciaLaboral'
+      Id:
+        type: integer
+        format: int64
+  models.TipoDedicacion:
+    title: TipoDedicacion
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.TipoExperienciaLaboral:
+    title: TipoExperienciaLaboral
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.TipoVinculacion:
+    title: TipoVinculacion
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+tags:
+- name: tipo_dedicacion
+  description: |
+    TipoDedicacionController operations for TipoDedicacion
+- name: cargo
+  description: |
+    CargoController operations for Cargo
+- name: soporte_experiencia_laboral
+  description: |
+    SoporteExperienciaLaboralController operations for SoporteExperienciaLaboral
+- name: dato_adicional_experiencia_laboral
+  description: |
+    DatoAdicionalExperienciaLaboralController operations for DatoAdicionalExperienciaLaboral
+- name: tipo_vinculacion
+  description: |
+    TipoVinculacionController operations for TipoVinculacion
+- name: experiencia_laboral
+  description: |
+    ExperienciaLaboralController operations for ExperienciaLaboral
+- name: tipo_experiencia_laboral
+  description: |
+    TipoExperienciaLaboralController operations for TipoExperienciaLaboral
+- name: dato_adicional_tipo_experiencia_laboral
+  description: |
+    DatoAdicionalTipoExperienciaLaboralController operations for DatoAdicionalTipoExperienciaLaboral

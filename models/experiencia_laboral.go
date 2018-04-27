@@ -11,7 +11,7 @@ import (
 )
 
 type ExperienciaLaboral struct {
-	Id                     int                     `orm:"column(id);pk"`
+	Id                     int                     `orm:"column(id);pk;auto"`
 	Persona                int                     `orm:"column(persona)"`
 	Actividades            string                  `orm:"column(actividades);null"`
 	Organizacion           int                     `orm:"column(organizacion)"`

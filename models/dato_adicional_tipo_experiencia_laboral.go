@@ -10,7 +10,7 @@ import (
 )
 
 type DatoAdicionalTipoExperienciaLaboral struct {
-	Id                     int                     `orm:"column(id);pk"`
+	Id                     int                     `orm:"column(id);pk;auto"`
 	TipoDatoAdicional      int                     `orm:"column(tipo_dato_adicional)"`
 	TipoExperienciaLaboral *TipoExperienciaLaboral `orm:"column(tipo_experiencia_laboral);rel(fk)"`
 }

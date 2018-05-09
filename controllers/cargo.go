@@ -2,11 +2,12 @@ package controllers
 
 import (
 	"encoding/json"
-	"errors"
 	"strconv"
 	"strings"
 
+	"github.com/fatih/structs"
 	"github.com/udistrital/experiencia_laboral_crud/models"
+	"github.com/udistrital/utils_oas/formatdata"
 
 	"github.com/astaxie/beego"
 )
@@ -42,7 +43,7 @@ func (c *CargoController) Post() {
 			c.Data["json"] = err.Error()
 		}
 	} else {
-		c.Data["json"] = err.Error()
+		c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: err.Error()}
 	}
 	c.ServeJSON()
 }
@@ -59,7 +60,7 @@ func (c *CargoController) GetOne() {
 	id, _ := strconv.Atoi(idStr)
 	v, err := models.GetCargoById(id)
 	if err != nil {
-		c.Data["json"] = err.Error()
+		c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: err.Error()}
 	} else {
 		c.Data["json"] = v
 	}
@@ -111,7 +112,7 @@ func (c *CargoController) GetAll() {
 		for _, cond := range strings.Split(v, ",") {
 			kv := strings.SplitN(cond, ":", 2)
 			if len(kv) != 2 {
-				c.Data["json"] = errors.New("Error: invalid query key/value pair")
+				c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: "Error: invalid query key/value pair"}
 				c.ServeJSON()
 				return
 			}
@@ -122,7 +123,7 @@ func (c *CargoController) GetAll() {
 
 	l, err := models.GetAllCargo(query, fields, sortby, order, offset, limit)
 	if err != nil {
-		c.Data["json"] = err.Error()
+		c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: err.Error()}
 	} else {
 		c.Data["json"] = l
 	}
@@ -143,12 +144,17 @@ func (c *CargoController) Put() {
 	v := models.Cargo{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdateCargoById(&v); err == nil {
-			c.Data["json"] = "OK"
+			c.Ctx.Output.SetStatus(200)
+			c.Data["json"] = models.Alert{Type: "success", Code: "S_200", Body: v}
 		} else {
-			c.Data["json"] = err.Error()
+			alertdb := structs.Map(err)
+			var code string
+			formatdata.FillStruct(alertdb["Code"], &code)
+			alert := models.Alert{Type: "error", Code: "E_" + code, Body: err.Error()}
+			c.Data["json"] = alert
 		}
 	} else {
-		c.Data["json"] = err.Error()
+		c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: err.Error()}
 	}
 	c.ServeJSON()
 }
@@ -164,9 +170,9 @@ func (c *CargoController) Delete() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	if err := models.DeleteCargo(id); err == nil {
-		c.Data["json"] = "OK"
+		c.Data["json"] = models.Alert{Type: "success", Code: "S_200", Body: "OK"}
 	} else {
-		c.Data["json"] = err.Error()
+		c.Data["json"] = models.Alert{Type: "error", Code: "E_400", Body: err.Error()}
 	}
 	c.ServeJSON()
 }

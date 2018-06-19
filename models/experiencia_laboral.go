@@ -11,16 +11,15 @@ import (
 )
 
 type ExperienciaLaboral struct {
-	Id                     int                     `orm:"column(id);pk;auto"`
-	Persona                int                     `orm:"column(persona)"`
-	Actividades            string                  `orm:"column(actividades);null"`
-	Organizacion           int                     `orm:"column(organizacion)"`
-	FechaInicio            time.Time               `orm:"column(fecha_inicio);type(date)"`
-	FechaFinalizacion      time.Time               `orm:"column(fecha_finalizacion);type(date)"`
-	TipoDedicacion         *TipoDedicacion         `orm:"column(tipo_dedicacion);rel(fk)"`
-	Cargo                  *Cargo                  `orm:"column(cargo);rel(fk)"`
-	TipoVinculacion        *TipoVinculacion        `orm:"column(tipo_vinculacion);rel(fk)"`
-	TipoExperienciaLaboral *TipoExperienciaLaboral `orm:"column(tipo_experiencia_laboral);rel(fk)"`
+	Id                int              `orm:"column(id);pk;auto"`
+	Persona           int              `orm:"column(persona)"`
+	Actividades       string           `orm:"column(actividades);null"`
+	Organizacion      int              `orm:"column(organizacion)"`
+	FechaInicio       time.Time        `orm:"column(fecha_inicio);type(date)"`
+	FechaFinalizacion time.Time        `orm:"column(fecha_finalizacion);type(date);null"`
+	TipoDedicacion    *TipoDedicacion  `orm:"column(tipo_dedicacion);rel(fk)"`
+	Cargo             *Cargo           `orm:"column(cargo);rel(fk)"`
+	TipoVinculacion   *TipoVinculacion `orm:"column(tipo_vinculacion);rel(fk)"`
 }
 
 func (t *ExperienciaLaboral) TableName() string {

@@ -51,18 +51,6 @@ func init() {
 				&controllers.ExperienciaLaboralController{},
 			),
 		),
-
-		beego.NSNamespace("/tipo_experiencia_laboral",
-			beego.NSInclude(
-				&controllers.TipoExperienciaLaboralController{},
-			),
-		),
-
-		beego.NSNamespace("/dato_adicional_tipo_experiencia_laboral",
-			beego.NSInclude(
-				&controllers.DatoAdicionalTipoExperienciaLaboralController{},
-			),
-		),
 	)
 	beego.AddNamespace(ns)
 }

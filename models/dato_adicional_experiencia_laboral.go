@@ -10,11 +10,11 @@ import (
 )
 
 type DatoAdicionalExperienciaLaboral struct {
-	Id                                  int                                  `orm:"column(id);pk;auto"`
-	DatoAdicionalTipoExperienciaLaboral *DatoAdicionalTipoExperienciaLaboral `orm:"column(dato_adicional_tipo_experiencia_laboral);rel(fk)"`
-	ExperienciaLaboral                  *ExperienciaLaboral                  `orm:"column(experiencia_laboral);rel(fk)"`
-	Valor                               string                               `orm:"column(valor)"`
-	Activo                              bool                                 `orm:"column(activo)"`
+	Id                 int                 `orm:"column(id);pk;auto"`
+	TipoDatoAdicional  int                 `orm:"column(tipo_dato_adicional)"`
+	ExperienciaLaboral *ExperienciaLaboral `orm:"column(experiencia_laboral);rel(fk)"`
+	Valor              string              `orm:"column(valor)"`
+	Activo             bool                `orm:"column(activo)"`
 }
 
 func (t *DatoAdicionalExperienciaLaboral) TableName() string {

@@ -9,8 +9,7 @@
             "email": "astaxie@gmail.com"
         },
         "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+            "name": "Url http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     },
     "basePath": "/v1",
@@ -20,7 +19,7 @@
                 "tags": [
                     "cargo"
                 ],
-                "description": "get Cargo",
+                "summary": "get Cargo",
                 "operationId": "CargoController.Get All",
                 "parameters": [
                     {
@@ -62,21 +61,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.Cargo",
                         "schema": {
-                            "$ref": "#/definitions/models.Cargo"
+                            "$ref": "#/definitions/Cargo"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "cargo"
                 ],
-                "description": "create Cargo",
+                "summary": "create Cargo",
                 "operationId": "CargoController.Post",
                 "parameters": [
                     {
@@ -85,13 +82,13 @@
                         "description": "body for Cargo content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Cargo"
+                            "$ref": "#/definitions/Cargo"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.Cargo"
+                        "description": "models.Cargo"
                     },
                     "403": {
                         "description": "body is empty"
@@ -104,7 +101,7 @@
                 "tags": [
                     "cargo"
                 ],
-                "description": "get Cargo by id",
+                "summary": "get Cargo by id",
                 "operationId": "CargoController.Get One",
                 "parameters": [
                     {
@@ -117,9 +114,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.Cargo",
                         "schema": {
-                            "$ref": "#/definitions/models.Cargo"
+                            "$ref": "#/definitions/Cargo"
                         }
                     },
                     "403": {
@@ -131,7 +128,7 @@
                 "tags": [
                     "cargo"
                 ],
-                "description": "update the Cargo",
+                "summary": "update the Cargo",
                 "operationId": "CargoController.Put",
                 "parameters": [
                     {
@@ -147,15 +144,15 @@
                         "description": "body for Cargo content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Cargo"
+                            "$ref": "#/definitions/Cargo"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.Cargo",
                         "schema": {
-                            "$ref": "#/definitions/models.Cargo"
+                            "$ref": "#/definitions/Cargo"
                         }
                     },
                     "403": {
@@ -167,7 +164,7 @@
                 "tags": [
                     "cargo"
                 ],
-                "description": "delete the Cargo",
+                "summary": "delete the Cargo",
                 "operationId": "CargoController.Delete",
                 "parameters": [
                     {
@@ -180,7 +177,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -193,7 +190,7 @@
                 "tags": [
                     "dato_adicional_experiencia_laboral"
                 ],
-                "description": "get DatoAdicionalExperienciaLaboral",
+                "summary": "get DatoAdicionalExperienciaLaboral",
                 "operationId": "DatoAdicionalExperienciaLaboralController.Get All",
                 "parameters": [
                     {
@@ -235,21 +232,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.DatoAdicionalExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
+                            "$ref": "#/definitions/DatoAdicionalExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "dato_adicional_experiencia_laboral"
                 ],
-                "description": "create DatoAdicionalExperienciaLaboral",
+                "summary": "create DatoAdicionalExperienciaLaboral",
                 "operationId": "DatoAdicionalExperienciaLaboralController.Post",
                 "parameters": [
                     {
@@ -258,13 +253,13 @@
                         "description": "body for DatoAdicionalExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
+                            "$ref": "#/definitions/DatoAdicionalExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.DatoAdicionalExperienciaLaboral"
+                        "description": "models.DatoAdicionalExperienciaLaboral"
                     },
                     "403": {
                         "description": "body is empty"
@@ -277,7 +272,7 @@
                 "tags": [
                     "dato_adicional_experiencia_laboral"
                 ],
-                "description": "get DatoAdicionalExperienciaLaboral by id",
+                "summary": "get DatoAdicionalExperienciaLaboral by id",
                 "operationId": "DatoAdicionalExperienciaLaboralController.Get One",
                 "parameters": [
                     {
@@ -290,9 +285,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.DatoAdicionalExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
+                            "$ref": "#/definitions/DatoAdicionalExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -304,7 +299,7 @@
                 "tags": [
                     "dato_adicional_experiencia_laboral"
                 ],
-                "description": "update the DatoAdicionalExperienciaLaboral",
+                "summary": "update the DatoAdicionalExperienciaLaboral",
                 "operationId": "DatoAdicionalExperienciaLaboralController.Put",
                 "parameters": [
                     {
@@ -320,15 +315,15 @@
                         "description": "body for DatoAdicionalExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
+                            "$ref": "#/definitions/DatoAdicionalExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.DatoAdicionalExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
+                            "$ref": "#/definitions/DatoAdicionalExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -340,7 +335,7 @@
                 "tags": [
                     "dato_adicional_experiencia_laboral"
                 ],
-                "description": "delete the DatoAdicionalExperienciaLaboral",
+                "summary": "delete the DatoAdicionalExperienciaLaboral",
                 "operationId": "DatoAdicionalExperienciaLaboralController.Delete",
                 "parameters": [
                     {
@@ -353,7 +348,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -366,7 +361,7 @@
                 "tags": [
                     "experiencia_laboral"
                 ],
-                "description": "get ExperienciaLaboral",
+                "summary": "get ExperienciaLaboral",
                 "operationId": "ExperienciaLaboralController.Get All",
                 "parameters": [
                     {
@@ -408,21 +403,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.ExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.ExperienciaLaboral"
+                            "$ref": "#/definitions/ExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "experiencia_laboral"
                 ],
-                "description": "create ExperienciaLaboral",
+                "summary": "create ExperienciaLaboral",
                 "operationId": "ExperienciaLaboralController.Post",
                 "parameters": [
                     {
@@ -431,13 +424,13 @@
                         "description": "body for ExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.ExperienciaLaboral"
+                            "$ref": "#/definitions/ExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.ExperienciaLaboral"
+                        "description": "models.ExperienciaLaboral"
                     },
                     "403": {
                         "description": "body is empty"
@@ -450,7 +443,7 @@
                 "tags": [
                     "experiencia_laboral"
                 ],
-                "description": "get ExperienciaLaboral by id",
+                "summary": "get ExperienciaLaboral by id",
                 "operationId": "ExperienciaLaboralController.Get One",
                 "parameters": [
                     {
@@ -463,9 +456,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.ExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.ExperienciaLaboral"
+                            "$ref": "#/definitions/ExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -477,7 +470,7 @@
                 "tags": [
                     "experiencia_laboral"
                 ],
-                "description": "update the ExperienciaLaboral",
+                "summary": "update the ExperienciaLaboral",
                 "operationId": "ExperienciaLaboralController.Put",
                 "parameters": [
                     {
@@ -493,15 +486,15 @@
                         "description": "body for ExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.ExperienciaLaboral"
+                            "$ref": "#/definitions/ExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.ExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.ExperienciaLaboral"
+                            "$ref": "#/definitions/ExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -513,7 +506,7 @@
                 "tags": [
                     "experiencia_laboral"
                 ],
-                "description": "delete the ExperienciaLaboral",
+                "summary": "delete the ExperienciaLaboral",
                 "operationId": "ExperienciaLaboralController.Delete",
                 "parameters": [
                     {
@@ -526,7 +519,178 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/relacion_cargos/": {
+            "get": {
+                "tags": [
+                    "relacion_cargos"
+                ],
+                "summary": "get RelacionCargos",
+                "operationId": "RelacionCargosController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "models.RelacionCargos",
+                        "schema": {
+                            "$ref": "#/definitions/RelacionCargos"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "relacion_cargos"
+                ],
+                "summary": "create RelacionCargos",
+                "operationId": "RelacionCargosController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RelacionCargos content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RelacionCargos"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "models.RelacionCargos"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/relacion_cargos/{id}": {
+            "get": {
+                "tags": [
+                    "relacion_cargos"
+                ],
+                "summary": "get RelacionCargos by id",
+                "operationId": "RelacionCargosController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "models.RelacionCargos",
+                        "schema": {
+                            "$ref": "#/definitions/RelacionCargos"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "relacion_cargos"
+                ],
+                "summary": "update the RelacionCargos",
+                "operationId": "RelacionCargosController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RelacionCargos content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RelacionCargos"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "models.RelacionCargos",
+                        "schema": {
+                            "$ref": "#/definitions/RelacionCargos"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "relacion_cargos"
+                ],
+                "summary": "delete the RelacionCargos",
+                "operationId": "RelacionCargosController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -539,7 +703,7 @@
                 "tags": [
                     "soporte_experiencia_laboral"
                 ],
-                "description": "get SoporteExperienciaLaboral",
+                "summary": "get SoporteExperienciaLaboral",
                 "operationId": "SoporteExperienciaLaboralController.Get All",
                 "parameters": [
                     {
@@ -581,21 +745,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.SoporteExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.SoporteExperienciaLaboral"
+                            "$ref": "#/definitions/SoporteExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "soporte_experiencia_laboral"
                 ],
-                "description": "create SoporteExperienciaLaboral",
+                "summary": "create SoporteExperienciaLaboral",
                 "operationId": "SoporteExperienciaLaboralController.Post",
                 "parameters": [
                     {
@@ -604,13 +766,13 @@
                         "description": "body for SoporteExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.SoporteExperienciaLaboral"
+                            "$ref": "#/definitions/SoporteExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.SoporteExperienciaLaboral"
+                        "description": "models.SoporteExperienciaLaboral"
                     },
                     "403": {
                         "description": "body is empty"
@@ -623,7 +785,7 @@
                 "tags": [
                     "soporte_experiencia_laboral"
                 ],
-                "description": "get SoporteExperienciaLaboral by id",
+                "summary": "get SoporteExperienciaLaboral by id",
                 "operationId": "SoporteExperienciaLaboralController.Get One",
                 "parameters": [
                     {
@@ -636,9 +798,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.SoporteExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.SoporteExperienciaLaboral"
+                            "$ref": "#/definitions/SoporteExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -650,7 +812,7 @@
                 "tags": [
                     "soporte_experiencia_laboral"
                 ],
-                "description": "update the SoporteExperienciaLaboral",
+                "summary": "update the SoporteExperienciaLaboral",
                 "operationId": "SoporteExperienciaLaboralController.Put",
                 "parameters": [
                     {
@@ -666,15 +828,15 @@
                         "description": "body for SoporteExperienciaLaboral content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.SoporteExperienciaLaboral"
+                            "$ref": "#/definitions/SoporteExperienciaLaboral"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.SoporteExperienciaLaboral",
                         "schema": {
-                            "$ref": "#/definitions/models.SoporteExperienciaLaboral"
+                            "$ref": "#/definitions/SoporteExperienciaLaboral"
                         }
                     },
                     "403": {
@@ -686,7 +848,7 @@
                 "tags": [
                     "soporte_experiencia_laboral"
                 ],
-                "description": "delete the SoporteExperienciaLaboral",
+                "summary": "delete the SoporteExperienciaLaboral",
                 "operationId": "SoporteExperienciaLaboralController.Delete",
                 "parameters": [
                     {
@@ -699,7 +861,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -712,7 +874,7 @@
                 "tags": [
                     "tipo_dedicacion"
                 ],
-                "description": "get TipoDedicacion",
+                "summary": "get TipoDedicacion",
                 "operationId": "TipoDedicacionController.Get All",
                 "parameters": [
                     {
@@ -754,21 +916,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoDedicacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoDedicacion"
+                            "$ref": "#/definitions/TipoDedicacion"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "tipo_dedicacion"
                 ],
-                "description": "create TipoDedicacion",
+                "summary": "create TipoDedicacion",
                 "operationId": "TipoDedicacionController.Post",
                 "parameters": [
                     {
@@ -777,13 +937,13 @@
                         "description": "body for TipoDedicacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.TipoDedicacion"
+                            "$ref": "#/definitions/TipoDedicacion"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.TipoDedicacion"
+                        "description": "models.TipoDedicacion"
                     },
                     "403": {
                         "description": "body is empty"
@@ -796,7 +956,7 @@
                 "tags": [
                     "tipo_dedicacion"
                 ],
-                "description": "get TipoDedicacion by id",
+                "summary": "get TipoDedicacion by id",
                 "operationId": "TipoDedicacionController.Get One",
                 "parameters": [
                     {
@@ -809,9 +969,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoDedicacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoDedicacion"
+                            "$ref": "#/definitions/TipoDedicacion"
                         }
                     },
                     "403": {
@@ -823,7 +983,7 @@
                 "tags": [
                     "tipo_dedicacion"
                 ],
-                "description": "update the TipoDedicacion",
+                "summary": "update the TipoDedicacion",
                 "operationId": "TipoDedicacionController.Put",
                 "parameters": [
                     {
@@ -839,15 +999,15 @@
                         "description": "body for TipoDedicacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.TipoDedicacion"
+                            "$ref": "#/definitions/TipoDedicacion"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoDedicacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoDedicacion"
+                            "$ref": "#/definitions/TipoDedicacion"
                         }
                     },
                     "403": {
@@ -859,7 +1019,7 @@
                 "tags": [
                     "tipo_dedicacion"
                 ],
-                "description": "delete the TipoDedicacion",
+                "summary": "delete the TipoDedicacion",
                 "operationId": "TipoDedicacionController.Delete",
                 "parameters": [
                     {
@@ -872,7 +1032,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -885,7 +1045,7 @@
                 "tags": [
                     "tipo_vinculacion"
                 ],
-                "description": "get TipoVinculacion",
+                "summary": "get TipoVinculacion",
                 "operationId": "TipoVinculacionController.Get All",
                 "parameters": [
                     {
@@ -927,21 +1087,19 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoVinculacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoVinculacion"
+                            "$ref": "#/definitions/TipoVinculacion"
                         }
                     },
-                    "403": {
-                        "description": ""
-                    }
+                    "403": {}
                 }
             },
             "post": {
                 "tags": [
                     "tipo_vinculacion"
                 ],
-                "description": "create TipoVinculacion",
+                "summary": "create TipoVinculacion",
                 "operationId": "TipoVinculacionController.Post",
                 "parameters": [
                     {
@@ -950,13 +1108,13 @@
                         "description": "body for TipoVinculacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.TipoVinculacion"
+                            "$ref": "#/definitions/TipoVinculacion"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.TipoVinculacion"
+                        "description": "models.TipoVinculacion"
                     },
                     "403": {
                         "description": "body is empty"
@@ -969,7 +1127,7 @@
                 "tags": [
                     "tipo_vinculacion"
                 ],
-                "description": "get TipoVinculacion by id",
+                "summary": "get TipoVinculacion by id",
                 "operationId": "TipoVinculacionController.Get One",
                 "parameters": [
                     {
@@ -982,9 +1140,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoVinculacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoVinculacion"
+                            "$ref": "#/definitions/TipoVinculacion"
                         }
                     },
                     "403": {
@@ -996,7 +1154,7 @@
                 "tags": [
                     "tipo_vinculacion"
                 ],
-                "description": "update the TipoVinculacion",
+                "summary": "update the TipoVinculacion",
                 "operationId": "TipoVinculacionController.Put",
                 "parameters": [
                     {
@@ -1012,15 +1170,15 @@
                         "description": "body for TipoVinculacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.TipoVinculacion"
+                            "$ref": "#/definitions/TipoVinculacion"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "",
+                        "description": "models.TipoVinculacion",
                         "schema": {
-                            "$ref": "#/definitions/models.TipoVinculacion"
+                            "$ref": "#/definitions/TipoVinculacion"
                         }
                     },
                     "403": {
@@ -1032,7 +1190,7 @@
                 "tags": [
                     "tipo_vinculacion"
                 ],
-                "description": "delete the TipoVinculacion",
+                "summary": "delete the TipoVinculacion",
                 "operationId": "TipoVinculacionController.Delete",
                 "parameters": [
                     {
@@ -1045,7 +1203,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{string} delete success!"
+                        "description": "delete success!"
                     },
                     "403": {
                         "description": "id is empty"
@@ -1055,7 +1213,7 @@
         }
     },
     "definitions": {
-        "models.Cargo": {
+        "Cargo": {
             "title": "Cargo",
             "type": "object",
             "properties": {
@@ -1081,7 +1239,7 @@
                 }
             }
         },
-        "models.DatoAdicionalExperienciaLaboral": {
+        "DatoAdicionalExperienciaLaboral": {
             "title": "DatoAdicionalExperienciaLaboral",
             "type": "object",
             "properties": {
@@ -1089,7 +1247,7 @@
                     "type": "boolean"
                 },
                 "ExperienciaLaboral": {
-                    "$ref": "#/definitions/models.ExperienciaLaboral"
+                    "$ref": "#/definitions/ExperienciaLaboral"
                 },
                 "Id": {
                     "type": "integer",
@@ -1104,7 +1262,7 @@
                 }
             }
         },
-        "models.ExperienciaLaboral": {
+        "ExperienciaLaboral": {
             "title": "ExperienciaLaboral",
             "type": "object",
             "properties": {
@@ -1112,15 +1270,13 @@
                     "type": "string"
                 },
                 "Cargo": {
-                    "$ref": "#/definitions/models.Cargo"
+                    "$ref": "#/definitions/Cargo"
                 },
                 "FechaFinalizacion": {
-                    "type": "string",
-                    "format": "string"
+                    "$ref": "#/definitions/\u0026{time Time}"
                 },
                 "FechaInicio": {
-                    "type": "string",
-                    "format": "string"
+                    "$ref": "#/definitions/\u0026{time Time}"
                 },
                 "Id": {
                     "type": "integer",
@@ -1135,14 +1291,33 @@
                     "format": "int64"
                 },
                 "TipoDedicacion": {
-                    "$ref": "#/definitions/models.TipoDedicacion"
+                    "$ref": "#/definitions/TipoDedicacion"
                 },
                 "TipoVinculacion": {
-                    "$ref": "#/definitions/models.TipoVinculacion"
+                    "$ref": "#/definitions/TipoVinculacion"
                 }
             }
         },
-        "models.SoporteExperienciaLaboral": {
+        "RelacionCargos": {
+            "title": "RelacionCargos",
+            "type": "object",
+            "properties": {
+                "Activo": {
+                    "type": "boolean"
+                },
+                "Hijo": {
+                    "$ref": "#/definitions/Cargo"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Padre": {
+                    "$ref": "#/definitions/Cargo"
+                }
+            }
+        },
+        "SoporteExperienciaLaboral": {
             "title": "SoporteExperienciaLaboral",
             "type": "object",
             "properties": {
@@ -1154,7 +1329,7 @@
                     "format": "int64"
                 },
                 "ExperienciaLaboral": {
-                    "$ref": "#/definitions/models.ExperienciaLaboral"
+                    "$ref": "#/definitions/ExperienciaLaboral"
                 },
                 "Id": {
                     "type": "integer",
@@ -1162,7 +1337,7 @@
                 }
             }
         },
-        "models.TipoDedicacion": {
+        "TipoDedicacion": {
             "title": "TipoDedicacion",
             "type": "object",
             "properties": {
@@ -1188,7 +1363,7 @@
                 }
             }
         },
-        "models.TipoVinculacion": {
+        "TipoVinculacion": {
             "title": "TipoVinculacion",
             "type": "object",
             "properties": {
@@ -1239,6 +1414,10 @@
         {
             "name": "experiencia_laboral",
             "description": "ExperienciaLaboralController operations for ExperienciaLaboral\n"
+        },
+        {
+            "name": "relacion_cargos",
+            "description": "oprations for RelacionCargos\n"
         }
     ]
 }

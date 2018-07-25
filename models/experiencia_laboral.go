@@ -54,7 +54,7 @@ func GetExperienciaLaboralById(id int) (v *ExperienciaLaboral, err error) {
 func GetAllExperienciaLaboral(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ExperienciaLaboral))
+	qs := o.QueryTable(new(ExperienciaLaboral)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

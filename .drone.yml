@@ -3,8 +3,7 @@ workspace:
   path: src/github.com/udistrital/${DRONE_REPO##udistrital/}
   when:
     branch: [master, develop]
-    event: push
-
+    
 pipeline:
 
   # build and test the go program
@@ -16,7 +15,6 @@ pipeline:
      
     when:
       branch: [master, develop]
-      event: push
 
   # prepare imagedef.json and app.zip for deployment
   sed:
@@ -28,8 +26,7 @@ pipeline:
       - zip ${DRONE_REPO##udistrital/}-${DRONE_BRANCH}.zip app.zip
     when:
       branch: [master, develop]
-      event: push
-      
+            
   # build and push docker image to docker hub
   publish_dockerhub:
     image: plugins/docker
@@ -40,8 +37,7 @@ pipeline:
       - latest
     when:
       branch: [master, develop]
-      event: push
-      
+            
   # upload app.zip to s3 bucket for CodePipline
   publish_s3:
     image: plugins/s3
@@ -52,8 +48,7 @@ pipeline:
     target: /apps
     when:
       branch: [master, develop]
-      event: push
-
+      
   #Notify results to telegram    
   notify_telegram:
     image: appleboy/drone-telegram    
@@ -70,4 +65,3 @@ pipeline:
     when:
       status: [success, failure]
       branch: [master, develop]
-      event: push

@@ -51,6 +51,12 @@ func init() {
 				&controllers.ExperienciaLaboralController{},
 			),
 		),
+
+		beego.NSNamespace("/relacion_cargos",
+			beego.NSInclude(
+				&controllers.RelacionCargosController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }

@@ -356,6 +356,121 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /relacion_cargos/:
+    get:
+      tags:
+      - relacion_cargos
+      description: get RelacionCargos
+      operationId: RelacionCargosController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.RelacionCargos'
+        "403":
+          description: ""
+    post:
+      tags:
+      - relacion_cargos
+      description: create RelacionCargos
+      operationId: RelacionCargosController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for RelacionCargos content
+        required: true
+        schema:
+          $ref: '#/definitions/models.RelacionCargos'
+      responses:
+        "201":
+          description: '{int} models.RelacionCargos'
+        "403":
+          description: body is empty
+  /relacion_cargos/{id}:
+    get:
+      tags:
+      - relacion_cargos
+      description: get RelacionCargos by id
+      operationId: RelacionCargosController.Get
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.RelacionCargos'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - relacion_cargos
+      description: update the RelacionCargos
+      operationId: RelacionCargosController.Update
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for RelacionCargos content
+        required: true
+        schema:
+          $ref: '#/definitions/models.RelacionCargos'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.RelacionCargos'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - relacion_cargos
+      description: delete the RelacionCargos
+      operationId: RelacionCargosController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /soporte_experiencia_laboral/:
     get:
       tags:
@@ -763,6 +878,19 @@ definitions:
         $ref: '#/definitions/models.TipoDedicacion'
       TipoVinculacion:
         $ref: '#/definitions/models.TipoVinculacion'
+  models.RelacionCargos:
+    title: RelacionCargos
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Hijo:
+        $ref: '#/definitions/models.Cargo'
+      Id:
+        type: integer
+        format: int64
+      Padre:
+        $ref: '#/definitions/models.Cargo'
   models.SoporteExperienciaLaboral:
     title: SoporteExperienciaLaboral
     type: object
@@ -832,3 +960,6 @@ tags:
 - name: experiencia_laboral
   description: |
     ExperienciaLaboralController operations for ExperienciaLaboral
+- name: relacion_cargos
+  description: |
+    oprations for RelacionCargos

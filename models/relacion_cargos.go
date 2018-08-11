@@ -9,55 +9,51 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type SoporteExperienciaLaboral struct {
-	Id                 int                 `orm:"column(id);pk;auto"`
-	ExperienciaLaboral *ExperienciaLaboral `orm:"column(experiencia_laboral);rel(fk)"`
-	Documento          int                 `orm:"column(documento)"`
-	Descripcion        string              `orm:"column(descripcion);null"`
+type RelacionCargos struct {
+	Id     int    `orm:"column(id);pk;auto"`
+	Padre  *Cargo `orm:"column(padre);rel(fk)"`
+	Hijo   *Cargo `orm:"column(hijo);rel(fk)"`
+	Activo bool   `orm:"column(activo)"`
 }
 
-func (t *SoporteExperienciaLaboral) TableName() string {
-	return "soporte_experiencia_laboral"
+func (t *RelacionCargos) TableName() string {
+	return "relacion_cargos"
 }
 
 func init() {
-	orm.RegisterModel(new(SoporteExperienciaLaboral))
+	orm.RegisterModel(new(RelacionCargos))
 }
 
-// AddSoporteExperienciaLaboral insert a new SoporteExperienciaLaboral into database and returns
+// AddRelacionCargos insert a new RelacionCargos into database and returns
 // last inserted Id on success.
-func AddSoporteExperienciaLaboral(m *SoporteExperienciaLaboral) (id int64, err error) {
+func AddRelacionCargos(m *RelacionCargos) (id int64, err error) {
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
 }
 
-// GetSoporteExperienciaLaboralById retrieves SoporteExperienciaLaboral by Id. Returns error if
+// GetRelacionCargosById retrieves RelacionCargos by Id. Returns error if
 // Id doesn't exist
-func GetSoporteExperienciaLaboralById(id int) (v *SoporteExperienciaLaboral, err error) {
+func GetRelacionCargosById(id int) (v *RelacionCargos, err error) {
 	o := orm.NewOrm()
-	v = &SoporteExperienciaLaboral{Id: id}
+	v = &RelacionCargos{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllSoporteExperienciaLaboral retrieves all SoporteExperienciaLaboral matches certain condition. Returns empty list if
+// GetAllRelacionCargos retrieves all RelacionCargos matches certain condition. Returns empty list if
 // no records exist
-func GetAllSoporteExperienciaLaboral(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllRelacionCargos(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(SoporteExperienciaLaboral))
+	qs := o.QueryTable(new(RelacionCargos))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
 		k = strings.Replace(k, ".", "__", -1)
-		if strings.Contains(k, "isnull") {
-			qs = qs.Filter(k, (v == "true" || v == "1"))
-		} else {
-			qs = qs.Filter(k, v)
-		}
+		qs = qs.Filter(k, v)
 	}
 	// order by:
 	var sortFields []string
@@ -98,7 +94,7 @@ func GetAllSoporteExperienciaLaboral(query map[string]string, fields []string, s
 		}
 	}
 
-	var l []SoporteExperienciaLaboral
+	var l []RelacionCargos
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -121,30 +117,30 @@ func GetAllSoporteExperienciaLaboral(query map[string]string, fields []string, s
 	return nil, err
 }
 
-// UpdateSoporteExperienciaLaboral updates SoporteExperienciaLaboral by Id and returns error if
+// UpdateRelacionCargos updates RelacionCargos by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateSoporteExperienciaLaboralById(m *SoporteExperienciaLaboral) (err error) {
+func UpdateRelacionCargosById(m *RelacionCargos) (err error) {
 	o := orm.NewOrm()
-	v := SoporteExperienciaLaboral{Id: m.Id}
+	v := RelacionCargos{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Update(m, "Documento", "Descripcion"); err == nil {
+		if num, err = o.Update(m); err == nil {
 			fmt.Println("Number of records updated in database:", num)
 		}
 	}
 	return
 }
 
-// DeleteSoporteExperienciaLaboral deletes SoporteExperienciaLaboral by Id and returns error if
+// DeleteRelacionCargos deletes RelacionCargos by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteSoporteExperienciaLaboral(id int) (err error) {
+func DeleteRelacionCargos(id int) (err error) {
 	o := orm.NewOrm()
-	v := SoporteExperienciaLaboral{Id: id}
+	v := RelacionCargos{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&SoporteExperienciaLaboral{Id: id}); err == nil {
+		if num, err = o.Delete(&RelacionCargos{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

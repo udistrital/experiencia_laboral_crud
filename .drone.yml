@@ -71,3 +71,4 @@ pipeline:
       status: [success, failure]
       branch: [master, develop]
       event: push
+      

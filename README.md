@@ -26,4 +26,4 @@ Definir los valores de las siguientes variables de entorno:
 Ejemplo: API_EXPERIENCIA_LABORAL_HTTP_PORT=8083 EXPERIENCIA_LABORAL_CRUD__PGUSER=user EXPERIENCIA_LABORAL_CRUD__PGPASS=password EXPERIENCIA_LABORAL_CRUD__PGURLS=localhost EXPERIENCIA_LABORAL_CRUD__PGDB=udistrital_core_db EXPERIENCIA_LABORAL_CRUD__SCHEMA=core_new bee run
 
 ## MODELO
-![image]().
+![image](https://github.com/udistrital/experiencia_laboral_crud/blob/develop/Screenshot%20from%202018-07-04%2017-01-09.png).

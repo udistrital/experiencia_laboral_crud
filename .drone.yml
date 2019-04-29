@@ -1,5 +1,5 @@
 kind: pipeline
-name: personas_crud
+name: expreiencia_laboral_crud
 
 workspace:
   base: /go

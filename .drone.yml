@@ -1,56 +1,56 @@
+kind: pipeline
+name: personas_crud
+
 workspace:
   base: /go
-  path: src/github.com/udistrital/${DRONE_REPO##udistrital/}
+  path: src/github.com/planesticud/${DRONE_REPO##planesticud/}
   when:
-    branch: [master, develop]
+    branch: 
+    - master
+    - develop
+    event:
+    - push
     
-pipeline:
+steps:
+- name: build
+  image: golang:1.9
+  commands:
+  - go get -t
+  - GOOS=linux GOARCH=amd64 go build -o main
+  - go get -u gopkg.in/alecthomas/gometalinter.v1
+  - gometalinter.v1 --install     
+  when:
+    branch: 
+    - master
+    - develop
+    event:
+    - push
+            
+- name: publish-dockerhub  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: usdocker
+    password:
+      from_secret: psdocker
+    repo: planesticud/${DRONE_REPO##planesticud/}
+    tags:
+    - ${DRONE_COMMIT:0:7}
+    - latest
+  when:
+    branch: 
+    - master
+    - develop
+    event:
+    - push
 
-  # build and test the go program
-  go:
-    image: golang:1.9
-    commands:
-     - go get -t
-     - GOOS=linux GOARCH=amd64 go build -o main
-    when:
-      branch: [master, develop]
-            
-  # build and push docker image to docker hub
-  publish_dockerhub:
-    image: plugins/docker
-    repo: oas0/${DRONE_REPO##udistrital/}
-    secrets: [ docker_username, docker_password ]
-    tag:
-      - ${DRONE_COMMIT:0:7}
-      - latest
-    when:
-      branch: [master, develop]
-            
-  # Update service ECS (Elastic Container Service) in AWS
-  go-awsecs:
-    image: golang:1.9
-    secrets: [ aws_access_key_id, aws_secret_access_key ]
-    commands:
-     - case ${DRONE_BRANCH} in
-         develop) AMBIENTE=preprod ;;
-         master) AMBIENTE=prod ;;
-       esac
-     - AWS_REGION=us-east-1
-     - CLUSTER=oas
-     - SERVICE=${DRONE_REPO##udistrital/}_$AMBIENTE
-     - MYCONTAINER=oas0/${DRONE_REPO##udistrital/}:${DRONE_COMMIT:0:7}
-     - container_name=${DRONE_REPO##udistrital/}
-     - go get -v -u -t github.com/udistrital/go-awsecs/cmd/update-aws-ecs-service
-     - AWS_ACCESS_KEY_ID=$${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=$${AWS_SECRET_ACCESS_KEY} AWS_REGION=$AWS_REGION
-       $GOPATH/bin/update-aws-ecs-service -cluster $CLUSTER -service $SERVICE -container-image $container_name=$MYCONTAINER
-    when:
-      branch: [master, develop]
-     
-  #Notify results to telegram
-  #telegram_token is the bot token and telegram_to is the group id that start with "-" character
-  notify_telegram:
-    image: appleboy/drone-telegram    
-    secrets: [ telegram_token, telegram_to ]
+- name: notify
+  image: appleboy/drone-telegram
+  settings:
+    token:
+      from_secret: telegram2
+    to:
+      from_secret: id2
     format: html
     message: >
       {{#success build.status}}
@@ -61,5 +61,11 @@ pipeline:
         <code>{{commit.branch}}</code>@<a href="{{commit.link}}">{{truncate commit.sha 7}}</a>
       {{/success}}
     when:
-      status: [success, failure]
-      branch: [master, develop]
+    status:
+    - failure
+    - success
+    branch: 
+    - master
+    - develop
+    event:
+    - push

@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "github.com/udistrital/experiencia_laboral_crud/routers"
-	apistatus "github.com/udistrital/utils_oas/apiStatusLib"
+	_ "github.com/planesticud/experiencia_laboral_crud/routers"
+	apistatus "github.com/planesticud/utils_oas/apiStatusLib"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"

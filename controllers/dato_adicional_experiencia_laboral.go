@@ -7,7 +7,7 @@ import (
 
 	"github.com/fatih/structs"
 	"github.com/planesticud/experiencia_laboral_crud/models"
-	"github.com/planesticud/utils_oas/formatdata"
+	"github.com/udistrital/utils_oas/formatdata"
 
 	"github.com/astaxie/beego"
 )

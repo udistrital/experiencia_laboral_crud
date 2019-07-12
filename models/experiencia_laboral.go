@@ -20,6 +20,7 @@ type ExperienciaLaboral struct {
 	TipoDedicacion    *TipoDedicacion  `orm:"column(tipo_dedicacion);rel(fk)"`
 	Cargo             *Cargo           `orm:"column(cargo);rel(fk)"`
 	TipoVinculacion   *TipoVinculacion `orm:"column(tipo_vinculacion);rel(fk)"`
+	FechaModificacion  string          `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *ExperienciaLaboral) TableName() string {
@@ -33,6 +34,9 @@ func init() {
 // AddExperienciaLaboral insert a new ExperienciaLaboral into database and returns
 // last inserted Id on success.
 func AddExperienciaLaboral(m *ExperienciaLaboral) (id int64, err error) {
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -132,6 +136,9 @@ func GetAllExperienciaLaboral(query map[string]string, fields []string, sortby [
 func UpdateExperienciaLaboralById(m *ExperienciaLaboral) (err error) {
 	o := orm.NewOrm()
 	v := ExperienciaLaboral{Id: m.Id}
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

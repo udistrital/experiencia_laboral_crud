@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -16,6 +17,7 @@ type TipoDedicacion struct {
 	CodigoAbreviacion string  `orm:"column(codigo_abreviacion);null"`
 	Activo            bool    `orm:"column(activo)"`
 	NumeroOrden       float64 `orm:"column(numero_orden);null"`
+	FechaModificacion string  `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *TipoDedicacion) TableName() string {
@@ -29,6 +31,9 @@ func init() {
 // AddTipoDedicacion insert a new TipoDedicacion into database and returns
 // last inserted Id on success.
 func AddTipoDedicacion(m *TipoDedicacion) (id int64, err error) {
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -128,6 +133,9 @@ func GetAllTipoDedicacion(query map[string]string, fields []string, sortby []str
 func UpdateTipoDedicacionById(m *TipoDedicacion) (err error) {
 	o := orm.NewOrm()
 	v := TipoDedicacion{Id: m.Id}
+	var t time.Time
+	t = time.Now()
+	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

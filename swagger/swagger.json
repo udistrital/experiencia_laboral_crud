@@ -1241,6 +1241,9 @@
                 "Descripcion": {
                     "type": "string"
                 },
+                "FechaModificacion": {
+                    "type": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -1263,6 +1266,9 @@
                 },
                 "ExperienciaLaboral": {
                     "$ref": "#/definitions/models.ExperienciaLaboral"
+                },
+                "FechaModificacion": {
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1295,6 +1301,9 @@
                     "type": "string",
                     "format": "datetime"
                 },
+                "FechaModificacion": {
+                    "type": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -1322,15 +1331,18 @@
                 "Activo": {
                     "type": "boolean"
                 },
-                "Hijo": {
+                "CargoHijo": {
                     "$ref": "#/definitions/models.Cargo"
+                },
+                "CargoPadre": {
+                    "$ref": "#/definitions/models.Cargo"
+                },
+                "FechaModificacion": {
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
-                },
-                "Padre": {
-                    "$ref": "#/definitions/models.Cargo"
                 }
             }
         },
@@ -1347,6 +1359,9 @@
                 },
                 "ExperienciaLaboral": {
                     "$ref": "#/definitions/models.ExperienciaLaboral"
+                },
+                "FechaModificacion": {
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1365,6 +1380,9 @@
                     "type": "string"
                 },
                 "Descripcion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
                     "type": "string"
                 },
                 "Id": {
@@ -1391,6 +1409,9 @@
                     "type": "string"
                 },
                 "Descripcion": {
+                    "type": "string"
+                },
+                "FechaModificacion": {
                     "type": "string"
                 },
                 "Id": {

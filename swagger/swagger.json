@@ -67,8 +67,8 @@
                             "$ref": "#/definitions/models.Cargo"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -93,8 +93,8 @@
                     "201": {
                         "description": "{int} models.Cargo"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -122,8 +122,8 @@
                             "$ref": "#/definitions/models.Cargo"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -158,8 +158,8 @@
                             "$ref": "#/definitions/models.Cargo"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -182,8 +182,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -240,8 +240,8 @@
                             "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -266,8 +266,8 @@
                     "201": {
                         "description": "{int} models.DatoAdicionalExperienciaLaboral"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -295,8 +295,8 @@
                             "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -331,8 +331,8 @@
                             "$ref": "#/definitions/models.DatoAdicionalExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -355,8 +355,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -413,8 +413,8 @@
                             "$ref": "#/definitions/models.ExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -439,8 +439,8 @@
                     "201": {
                         "description": "{int} models.ExperienciaLaboral"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -468,8 +468,8 @@
                             "$ref": "#/definitions/models.ExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -504,8 +504,8 @@
                             "$ref": "#/definitions/models.ExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -528,8 +528,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -586,8 +586,8 @@
                             "$ref": "#/definitions/models.RelacionCargos"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -612,8 +612,8 @@
                     "201": {
                         "description": "{int} models.RelacionCargos"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -641,8 +641,8 @@
                             "$ref": "#/definitions/models.RelacionCargos"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -677,8 +677,8 @@
                             "$ref": "#/definitions/models.RelacionCargos"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -701,8 +701,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -759,8 +759,8 @@
                             "$ref": "#/definitions/models.SoporteExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -785,8 +785,8 @@
                     "201": {
                         "description": "{int} models.SoporteExperienciaLaboral"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -814,8 +814,8 @@
                             "$ref": "#/definitions/models.SoporteExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -850,8 +850,8 @@
                             "$ref": "#/definitions/models.SoporteExperienciaLaboral"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -874,8 +874,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -932,8 +932,8 @@
                             "$ref": "#/definitions/models.TipoDedicacion"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -958,8 +958,8 @@
                     "201": {
                         "description": "{int} models.TipoDedicacion"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -987,8 +987,8 @@
                             "$ref": "#/definitions/models.TipoDedicacion"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -1023,8 +1023,8 @@
                             "$ref": "#/definitions/models.TipoDedicacion"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -1047,8 +1047,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -1105,8 +1105,8 @@
                             "$ref": "#/definitions/models.TipoVinculacion"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -1131,8 +1131,8 @@
                     "201": {
                         "description": "{int} models.TipoVinculacion"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -1160,8 +1160,8 @@
                             "$ref": "#/definitions/models.TipoVinculacion"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -1196,8 +1196,8 @@
                             "$ref": "#/definitions/models.TipoVinculacion"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -1220,8 +1220,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -1239,6 +1239,9 @@
                     "type": "string"
                 },
                 "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
                     "type": "string"
                 },
                 "FechaModificacion": {
@@ -1267,6 +1270,9 @@
                 "ExperienciaLaboral": {
                     "$ref": "#/definitions/models.ExperienciaLaboral"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
                     "type": "string"
                 },
@@ -1292,6 +1298,9 @@
                 },
                 "Cargo": {
                     "$ref": "#/definitions/models.Cargo"
+                },
+                "FechaCreacion": {
+                    "type": "string"
                 },
                 "FechaFinalizacion": {
                     "type": "string",
@@ -1337,6 +1346,9 @@
                 "CargoPadre": {
                     "$ref": "#/definitions/models.Cargo"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
                     "type": "string"
                 },
@@ -1360,6 +1372,9 @@
                 "ExperienciaLaboral": {
                     "$ref": "#/definitions/models.ExperienciaLaboral"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
                     "type": "string"
                 },
@@ -1380,6 +1395,9 @@
                     "type": "string"
                 },
                 "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
                     "type": "string"
                 },
                 "FechaModificacion": {
@@ -1409,6 +1427,9 @@
                     "type": "string"
                 },
                 "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
                     "type": "string"
                 },
                 "FechaModificacion": {

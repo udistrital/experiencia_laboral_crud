@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type SoporteExperienciaLaboral struct {
@@ -15,6 +15,7 @@ type SoporteExperienciaLaboral struct {
 	ExperienciaLaboral *ExperienciaLaboral `orm:"column(experiencia_laboral);rel(fk)"`
 	Documento          int                 `orm:"column(documento)"`
 	Descripcion        string              `orm:"column(descripcion);null"`
+	FechaCreacion      string              `orm:"column(fecha_creacion);null"`
 	FechaModificacion  string              `orm:"column(fecha_modificacion);null"`
 }
 
@@ -29,9 +30,8 @@ func init() {
 // AddSoporteExperienciaLaboral insert a new SoporteExperienciaLaboral into database and returns
 // last inserted Id on success.
 func AddSoporteExperienciaLaboral(m *SoporteExperienciaLaboral) (id int64, err error) {
-	var t time.Time
-	t = time.Now()
-	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -131,9 +131,7 @@ func GetAllSoporteExperienciaLaboral(query map[string]string, fields []string, s
 func UpdateSoporteExperienciaLaboralById(m *SoporteExperienciaLaboral) (err error) {
 	o := orm.NewOrm()
 	v := SoporteExperienciaLaboral{Id: m.Id}
-	var t time.Time
-	t = time.Now()
-	m.FechaModificacion = fmt.Sprintf("%s", t.UTC().Format(time.UnixDate))
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

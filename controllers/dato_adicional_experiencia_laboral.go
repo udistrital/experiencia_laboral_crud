@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	"github.com/planesticud/experiencia_laboral_crud/models"
 )
 
@@ -37,13 +38,13 @@ func (c *DatoAdicionalExperienciaLaboralController) Post() {
 			c.Ctx.Output.SetStatus(201)
 			c.Data["json"] = v
 		} else {
-			beego.Error(err)
+			logs.Error(err)
 			//c.Data["development"] = map[string]interface{}{"Code": "400", "Body": err.Error(), "Type": "error"}
 			c.Data["system"] = err
 			c.Abort("400")
 		}
 	} else {
-		beego.Error(err)
+		logs.Error(err)
 		//c.Data["development"] = map[string]interface{}{"Code": "400", "Body": err.Error(), "Type": "error"}
 		c.Data["system"] = err
 		c.Abort("400")
@@ -63,7 +64,7 @@ func (c *DatoAdicionalExperienciaLaboralController) GetOne() {
 	id, _ := strconv.Atoi(idStr)
 	v, err := models.GetDatoAdicionalExperienciaLaboralById(id)
 	if err != nil {
-		beego.Error(err)
+		logs.Error(err)
 		//c.Data["development"] = map[string]interface{}{"Code": "404", "Body": err.Error(), "Type": "error"}
 		c.Data["system"] = err
 		c.Abort("404")
@@ -129,7 +130,7 @@ func (c *DatoAdicionalExperienciaLaboralController) GetAll() {
 
 	l, err := models.GetAllDatoAdicionalExperienciaLaboral(query, fields, sortby, order, offset, limit)
 	if err != nil {
-		beego.Error(err)
+		logs.Error(err)
 		//c.Data["development"] = map[string]interface{}{"Code": "404", "Body": err.Error(), "Type": "error"}
 		c.Data["system"] = err
 		c.Abort("404")
@@ -159,13 +160,13 @@ func (c *DatoAdicionalExperienciaLaboralController) Put() {
 			c.Ctx.Output.SetStatus(200)
 			c.Data["json"] = v
 		} else {
-			beego.Error(err)
+			logs.Error(err)
 			//c.Data["development"] = map[string]interface{}{"Code": "400", "Body": err.Error(), "Type": "error"}
 			c.Data["System"] = err
 			c.Abort("400")
 		}
 	} else {
-		beego.Error(err)
+		logs.Error(err)
 		//c.Data["development"] = map[string]interface{}{"Code": "400", "Body": err.Error(), "Type": "error"}
 		c.Data["System"] = err
 		c.Abort("400")
@@ -186,7 +187,7 @@ func (c *DatoAdicionalExperienciaLaboralController) Delete() {
 	if err := models.DeleteDatoAdicionalExperienciaLaboral(id); err == nil {
 		c.Data["json"] = map[string]interface{}{"Id": id}
 	} else {
-		beego.Error(err)
+		logs.Error(err)
 		//c.Data["development"] = map[string]interface{}{"Code": "404", "Body": err.Error(), "Type": "error"}
 		c.Data["System"] = err
 		c.Abort("404")

@@ -1,4 +1,13 @@
 {
   "title": "Example Schema",
-  "type": "array"
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "TipoDatoAdicional": { "type": "integer" },
+    "ExperienciaLaboral":	{ "type": "ExperienciaLaboral" },
+    "Valor": { "type": "string" },
+    "Activo": { "type": "boolean" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
 }

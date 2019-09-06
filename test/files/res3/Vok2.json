@@ -1,4 +1,17 @@
 {
   "title": "Example Schema",
-  "type": "array"
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Persona": { "type": "integer" },
+    "Actividades": { "type": "string" },
+    "Organizacion": { "type": "integer" },
+    "FechaInicio": { "type": "string" },
+    "FechaFinalizacion": { "type": "string" },
+    "TipoDedicacion": { "type": "TipoDedicacion" },
+    "Cargo": { "type": "Cargo" },
+    "TipoVinculacion": { "type": "TipoVinculacion" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
 }

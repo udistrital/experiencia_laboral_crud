@@ -1,5 +1,12 @@
 {
-    "Type": "error",
-    "Code": "E_400",
-    "Body": "json: cannot unmarshal string into Go struct field TipoDedicacion.NumeroOrden of type float64"
+  "Development": null,
+  "Message": "The request contains incorrect syntax",
+  "Status": "400",
+  "System": {
+    "Value": "string",
+    "Type": {},
+    "Offset": 85,
+    "Struct": "Cargo",
+    "Field": "Activo"
   }
+}

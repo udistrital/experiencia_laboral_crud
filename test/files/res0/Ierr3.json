@@ -1,5 +1,0 @@
-{
-    "Type": "error",
-    "Code": "E_400",
-    "Body": "json: cannot unmarshal number into Go struct field Cargo.CodigoAbreviacion of type string"
-  }

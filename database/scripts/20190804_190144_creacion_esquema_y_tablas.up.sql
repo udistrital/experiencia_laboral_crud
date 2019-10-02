@@ -261,3 +261,7 @@ ALTER TABLE experiencia_laboral.experiencia_laboral ADD CONSTRAINT fk_experienci
 REFERENCES experiencia_laboral.tipo_dedicacion (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE;
 -- ddl-end --
+
+GRANT USAGE ON SCHEMA acta_recibido TO desarrollooas;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA acta_recibido TO desarrollooas;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA acta_recibido TO desarrollooas;

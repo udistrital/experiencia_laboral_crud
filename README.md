@@ -30,4 +30,4 @@ Definir los valores de las siguientes variables de entorno:
 EXPERIENCIA_LABORAL_HTTP_PORT=8099 EXPERIENCIA_LABORAL_CRUD__PGUSER=user EXPERIENCIA_LABORAL_CRUD__PGPASS=password EXPERIENCIA_LABORAL_CRUD__PGURLS=localhost EXPERIENCIA_LABORAL_CRUD__PGDB=bd EXPERIENCIA_LABORAL_CRUD__SCHEMA=schema_new bee run
 
 ## Modelo BD
-![image](https://github.com/planesticud/experiencia_laboral_crud/blob/develop/modelo_experiencia_laboral_crud.png).
+![modelo_experiencia_laboral_crud](https://user-images.githubusercontent.com/14035745/66067295-e07c7100-e510-11e9-98f5-8234185d2b82.png)

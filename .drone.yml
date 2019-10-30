@@ -38,6 +38,7 @@ steps:
      - bee migrate -driver=postgres -conn="postgres://$${PG_MIGRATION_USER}:$${PG_MIGRATION_PASS}@$${PG_MIGRATION_URL}:5432/$${PG_MIGRATION_DBNAME}?sslmode=disable"
     when:
       branch:
+      - test
       - master
       event:
       - push      
@@ -59,6 +60,7 @@ steps:
      - bee migrate rollback -driver=postgres -conn="postgres://$${PG_MIGRATION_USER}:$${PG_MIGRATION_PASS}@$${PG_MIGRATION_URL}:5432/$${PG_MIGRATION_DBNAME}?sslmode=disable"
     when:
       branch:
+        - test
         - master    
       status:
         - failure
@@ -130,7 +132,6 @@ steps:
     when:
       branch:
       - master
-      - test
       status:
       - failure
       - success

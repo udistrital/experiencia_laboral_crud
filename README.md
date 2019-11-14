@@ -14,7 +14,7 @@ Go version >= 1.8.
 ## Preparación
 Para usar el API, usar el comando:
 
- - `go get github.com/planesticud/experiencia_laboral_crud`
+ - `go get github.com/udistrital/experiencia_laboral_crud`
 
 ## Ejecución
 Definir los valores de las siguientes variables de entorno:

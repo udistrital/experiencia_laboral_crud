@@ -1,0 +1,24 @@
+{
+	"Development": null,
+	"Message": "The request contains incorrect syntax",
+	"Status": "400",
+	"System": {
+		"Severity": "ERROR",
+		"Code": "23505",
+		"Message": "llave duplicada viola restricción de unicidad «pk_cargo»",
+		"Detail": "Ya existe la llave (id)=(9).",
+		"Hint": "",
+		"Position": "",
+		"InternalPosition": "",
+		"InternalQuery": "",
+		"Where": "",
+		"Schema": "experiencia_laboral",
+		"Table": "cargo",
+		"Column": "",
+		"DataTypeName": "",
+		"Constraint": "pk_cargo",
+		"File": "nbtinsert.c",
+		"Line": "434",
+		"Routine": "_bt_check_unique"
+	}
+}

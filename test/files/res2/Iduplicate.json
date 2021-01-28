@@ -1,6 +1,0 @@
-
-{
-    "Type": "error",
-    "Code": "E_400",
-    "Body": "pq: duplicate key value violates unique constraint \"uq_nombre_estado_civil\""
-}

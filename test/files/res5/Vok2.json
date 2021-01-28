@@ -1,0 +1,12 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "ExperienciaLaboral": { "type": "ExperienciaLaboral" },
+    "Documento": { "type": "integer" },
+    "Descripcion": { "type": "string" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}

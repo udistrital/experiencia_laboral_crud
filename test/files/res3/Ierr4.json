@@ -1,5 +1,0 @@
-{
-    "Type": "error",
-    "Code": "E_400",
-    "Body": "json: cannot unmarshal string into Go struct field TipoVinculacion.Activo of type bool"
-}

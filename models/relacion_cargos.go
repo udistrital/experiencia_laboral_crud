@@ -7,13 +7,16 @@ import (
 	"strings"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type RelacionCargos struct {
-	Id     int    `orm:"column(id);pk;auto"`
-	Padre  *Cargo `orm:"column(padre);rel(fk)"`
-	Hijo   *Cargo `orm:"column(hijo);rel(fk)"`
-	Activo bool   `orm:"column(activo)"`
+	Id                int    `orm:"column(id);pk;auto"`
+	CargoPadre        *Cargo `orm:"column(cargo_padre);rel(fk)"`
+	CargoHijo         *Cargo `orm:"column(cargo_hijo);rel(fk)"`
+	Activo            bool   `orm:"column(activo)"`
+	FechaCreacion     string `orm:"column(fecha_creacion);null"`
+	FechaModificacion string `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *RelacionCargos) TableName() string {
@@ -27,6 +30,8 @@ func init() {
 // AddRelacionCargos insert a new RelacionCargos into database and returns
 // last inserted Id on success.
 func AddRelacionCargos(m *RelacionCargos) (id int64, err error) {
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -122,10 +127,11 @@ func GetAllRelacionCargos(query map[string]string, fields []string, sortby []str
 func UpdateRelacionCargosById(m *RelacionCargos) (err error) {
 	o := orm.NewOrm()
 	v := RelacionCargos{Id: m.Id}
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Update(m); err == nil {
+		if num, err = o.Update(m, "CargoPadre", "CargoHijo", "Activo", "FechaModificacion"); err == nil {
 			fmt.Println("Number of records updated in database:", num)
 		}
 	}

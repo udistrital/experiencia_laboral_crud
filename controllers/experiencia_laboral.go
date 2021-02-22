@@ -7,7 +7,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"github.com/planesticud/experiencia_laboral_crud/models"
+	"github.com/udistrital/experiencia_laboral_crud/models"
 )
 
 // ExperienciaLaboralController operations for ExperienciaLaboral

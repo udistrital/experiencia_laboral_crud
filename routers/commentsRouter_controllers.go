@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:CargoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:CargoController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -52,7 +52,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -61,7 +61,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -70,7 +70,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -79,7 +79,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -88,7 +88,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:DatoAdicionalExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -97,7 +97,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -106,7 +106,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -115,7 +115,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -124,7 +124,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -133,7 +133,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:ExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -142,7 +142,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -151,7 +151,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -160,7 +160,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -169,7 +169,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -178,7 +178,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:RelacionCargosController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:RelacionCargosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -187,7 +187,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -196,7 +196,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -205,7 +205,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -214,7 +214,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -223,7 +223,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:SoporteExperienciaLaboralController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -232,7 +232,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -241,7 +241,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -250,7 +250,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -259,7 +259,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -268,7 +268,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoDedicacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoDedicacionController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -277,7 +277,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -286,7 +286,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -295,7 +295,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -304,7 +304,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -313,7 +313,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/planesticud/experiencia_laboral_crud/controllers:TipoVinculacionController"],
+    beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"] = append(beego.GlobalControllerRouter["github.com/udistrital/experiencia_laboral_crud/controllers:TipoVinculacionController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
